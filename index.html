@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>VRRT</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/main.css">
+    <img class="logo" src = "images/va-seal.svg">
+</head>
+<body>
+    <h1>
+        Please complete the following patient survey.
+    </h1>
+
+    <h2>
+        <i>Responses will be recorded for research purposes only.</i>
+    </h2>
+
+    <div class="survey-comp" id="prior">
+
+    <p class="subtitle" id="survey">
+        <b>Patient status prior to virtual reality therapy session.</b>
+    </p>
+
+    <form class="patientDataPoints" id="input">
+        Pain Score <input type = "text" name = "painScore" maxlength="2"/> (0-10)
+        <br>
+        Heart Rate <input type = "text" name = "heartRate"maxlength="3"/> BPM
+        <br>
+        Blood Pressure <input type = "text" name = "systolicBloodPressure" maxlength="3"/>
+        / <input type = "text" name = "diastolicBloodPressure" maxlength="3"/>
+        <br>
+        O2 Saturation <input type = "text" name = "o2Saturation" maxlength="3"/> %
+    </form>
+
+    <p class ="subtitle" id="survey">
+        <b>Please check all that apply.</b>
+    </p>
+
+    <form class="patientDataPoints" id="checkbox">
+        <input type = "checkbox" name = "restlessness" value = "on"> Restlessness
+        <input type = "checkbox" name = "depression" value = "on"> Depression
+        <input type = "checkbox" name = "nausea" value = "on"> Nausea
+        <input type = "checkbox" name = "lossOfMobility" value = "on"> Loss of Mobility
+     </form>
+
+     <form class="patientDataPoints" id="checkbox">
+        <input type = "checkbox" name = "anxiety" value = "on"> Anxiety
+        <input type = "checkbox" name = "visiblePain" value = "on"> Visible Pain
+        <input type = "checkbox" name = "tremors" value = "on"> Tremors
+        <input type = "checkbox" name = "Delusions" value = "on"> Delusions
+     </form>
+
+    </div>
+
+    <div class="survey-comp" id="after">
+
+     <p class ="subtitle" id="survey">
+        <b>Patient status after the virtual reality therapy session.</b>
+    </p>
+
+    <form class="patientDataPoints" id="input">
+        Pain Score <input type = "text" name = "painScore" maxlength="2"/> (0-10)
+        <br>
+        Heart Rate <input type = "text" name = "heartRate" maxlength="3"/> BPM
+        <br>
+        Blood Pressure <input type = "text" name = "systolicBloodPressure" maxlength="3"/>
+        / <input type = "text" name = "diastolicBloodPressure" maxlength="3"/>
+        <br>
+        O2 Saturation <input type = "text" name = "o2Saturation" maxlength="3"/> %
+    </form>
+
+    <p class="subtitle" id="survey">
+        <b>Please check all that apply.</b>
+    </p>
+
+    <form class="patientDataPoints" id="checkbox">
+        <input type = "checkbox" name = "restlessness" value = "on"> Restlessness
+        <input type = "checkbox" name = "depression" value = "on"> Depression
+        <input type = "checkbox" name = "nausea" value = "on"> Nausea
+        <input type = "checkbox" name = "lossOfMobility" value = "on"> Loss of Mobility
+     </form>
+
+     <form class="patientDataPoints" id="checkbox">
+        <input type = "checkbox" name = "anxiety" value = "on"> Anxiety
+        <input type = "checkbox" name = "visiblePain" value = "on"> Visible Pain
+        <input type = "checkbox" name = "tremors" value = "on"> Tremors
+        <input type = "checkbox" name = "Delusions" value = "on"> Delusions
+     </form>
+
+    </div>
+
+    <form class="buttons">
+        <input type = "button" name = "cancel" value = "Cancel" id="cancelButton"/>
+        <input type = "button" name = "submit" value = "Submit" id="submitButton"/>
+    </form>
+    
+</body>
+</html>

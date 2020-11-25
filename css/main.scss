@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: #050D1F;
+    color: white;
+    font-size: 16pt;
+    margin-left: 900px;
+    margin-right: 1200px;
+    text-align: left;
+}
+h1 {
+    font-family: 'Segoe UI';
+    font-weight: "Regular";
+    font-size: 21pt;
+}
+h2 {
+    font-size: 16pt;
+}
+
+.logo {
+    margin-left: 800px;
+    //margin-right: 200px;
+}
+
+.container {
+    //display: inline-flex;
+    width: 752.94px;
+    height: 752.94px;
+}
+
+.survey-comp {
+    background-color: #202530;
+    background-position: center;
+    margin-right: 100px;
+}
+
+.buttons {
+    font-size: 16pt;
+}
+
+.subtitle {
+    margin-left: 20px;
+}
+
+.patientDataPoints {
+    margin-left: 20px;
+}
+
+#checkbox {
+    font-size: 14pt;
+}
+
+#cancelButton {
+    background-color: #707070;
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-left: 61px;
+    margin-top: 20px;
+
+}
+
+#submitButton {
+    background-color: #D5D6D7;
+    color: #202530;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-left: 330px;
+}
