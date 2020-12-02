@@ -1,11 +1,33 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit">
-  </form>
+<div id= "container1"> 
+  <h2> Please complete the patient health survey. </h2>
+  <div class = "box1">
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+      {{ form.as_table }}
+      </table>
+    </form>
+  </div>
+      <!-- <div class="cont1">
+      <div class="inner">
+        <div class="grid-style">
+          <div>
+            <div class="box">
+              
+            </div>
+          </div>
+          <div>
+            <div class="box">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <input type="submit" value="Submit" class = "SubmitButton">
+</div>  
+
 {% endblock %}
