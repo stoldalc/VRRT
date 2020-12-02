@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 from VRRTController.models import Survey, SurveyInstance, SiteID
 
 # Create your views here.
@@ -29,12 +28,15 @@ from django.views import generic
 
 class SurveyInstanceListView(generic.ListView):
     model = SurveyInstance 
-
+    
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 class SurveyCreate(CreateView):
     model = SurveyInstance
-    fields = ['PainScoreStart','PainScoreEnd']
+    fields = ['PainScoreStart','PainScoreEnd', 'HeartRateStart', 
+        'HeartRateEnd', 'BPStartValue1', 'BPStartValue2', 
+        'BPEndValue1', 'BPEndValue2', 'O2SaturationStart',
+        'O2SaturationEnd']
     success_url = reverse_lazy('index')

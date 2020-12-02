@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 # Create your models here.
 
@@ -32,10 +33,31 @@ class SurveyInstance(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular survey')
 
     #Pain score at start of session
-    PainScoreStart = models.IntegerField()
+    PainScoreStart = models.PositiveIntegerField(default=0)
 
     #Pain score at end of session
-    PainScoreEnd = models.IntegerField()
+    PainScoreEnd = models.PositiveIntegerField(default=0)
+
+    # Heart rate at start of session
+    HeartRateStart = models.PositiveIntegerField(default=0, help_text='Heart Rate at the start of session')
+
+    # Heart rate at end of session
+    HeartRateEnd = models.PositiveIntegerField(default=0, help_text='Heart Rate at the end of session')
+
+    # Blood Pressure at start
+    BPStartValue1 = models.PositiveIntegerField(default=0, help_text='Blood Pressure value1 at the start of session')
+    BPStartValue2 = models.PositiveIntegerField(default=0, help_text='Blood Pressure value2 at the start of session')
+
+    # Blood Pressure at end
+    BPEndValue1 = models.PositiveIntegerField(default=0, help_text='Blood Pressure value1 at the end of session')
+    BPEndValue2 = models.PositiveIntegerField(default=0, help_text='Blood Pressure value2 at the end of session')
+    
+    # O2 saturation at start
+    O2SaturationStart = models.PositiveIntegerField(default=0, help_text='Oxygen saturation level at start of session')
+
+    # O2 saturation at the end
+    O2SaturationEnd = models.PositiveIntegerField(default=0, help_text='Oxygen saturation level at the end of session')
+
 
 class SiteID(models.Model):
     """A model that describes the VA location"""
