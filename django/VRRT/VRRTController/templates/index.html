@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Virtual Reality Research Tool</h1>
+  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Sites:</strong> {{ num_Sites }}</li>
+    <li><strong>Survey types:</strong> {{ num_Surveys }}</li>
+    <li><strong>Submited surveys:</strong> {{ num_Surveys_Submitted }}</li>
+  </ul>
+{% endblock %}
