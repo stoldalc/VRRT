@@ -80,9 +80,12 @@ li {
 }
 
 .box1{
-    background-color: rgb(220, 20, 20) !important;
+    background-color: rgb(220, 20, 20, .6) !important;
     border-radius: 12px;
     margin: 4px;
+    background-size: cover !important;
+    width: 400px;
+
 }
 
 /*.cont1 {
