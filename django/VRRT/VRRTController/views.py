@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from VRRTController.models import Survey, SurveyInstance, SiteID
+from django.views import generic
+
 
 # Create your views here.
 
@@ -24,7 +26,12 @@ def index(request):
     return render(request,'index.html',context=context)
 
 
-from django.views import generic
+class MissionStatmentView(generic.View):
+    def get(self, request):
+        return render(request, "mission_statment.html")
+
+
+
 
 class SurveyInstanceListView(generic.ListView):
     model = SurveyInstance 
@@ -40,3 +47,6 @@ class SurveyCreate(CreateView):
         'BPEndValue1', 'BPEndValue2', 'O2SaturationStart',
         'O2SaturationEnd']
     success_url = reverse_lazy('index')
+
+class SiteListView(generic.ListView):
+    model = SiteID

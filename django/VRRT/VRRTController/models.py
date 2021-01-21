@@ -62,7 +62,17 @@ class SurveyInstance(models.Model):
 class SiteID(models.Model):
     """A model that describes the VA location"""
 
-    SiteName = models.CharField(max_length=200, help_text='Enter the site location or name')
+    SiteName = models.CharField(default='NOT SET', max_length=200, help_text='Enter the site location or name')
+
+    SiteAddress = models.CharField(default='NOT SET', max_length=200, help_text='Enter the site street address')
+
+    SiteState = models.CharField(default='NOT SET', max_length=200, help_text='Enter the site state')
+
+    SiteCity = models.CharField(default='NOT SET', max_length=200, help_text='Enter the site city')
+
+    SiteZipCode = models.CharField(default='NOT SET', max_length=200, help_text='Enther the site zip code')
+
+    SiteTelephone = models.CharField(default='NOT SET', max_length=200, help_text='Enter the site telephone number')
 
     def __str__(self):
         """String that reprsents the model object."""
