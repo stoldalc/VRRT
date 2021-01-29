@@ -1,6 +1,12 @@
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from VRRTController.models import Survey, SurveyInstance, SiteID
 from django.views import generic
+from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+
+
 
 
 # Create your views here.
@@ -37,9 +43,6 @@ class SurveyInstanceListView(generic.ListView):
     model = SurveyInstance 
     
 
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
-
 class SurveyCreate(CreateView):
     model = SurveyInstance
     fields = ['PainScoreStart','PainScoreEnd', 'HeartRateStart', 
@@ -50,3 +53,25 @@ class SurveyCreate(CreateView):
 
 class SiteListView(generic.ListView):
     model = SiteID
+
+
+@login_required
+def logInRedirect(request):
+    group = request.user.groups.filter(user=request.user)[0]
+    print(group.name)
+    if group.name=="Staff":
+        return HttpResponseRedirect(reverse_lazy('staffLandingPage'))
+    elif group.name=="Patient":
+        return HttpResponseRedirect(reverse_lazy('patientLandingPage'))
+
+    context = {}
+    template = "base_generic.html"
+    return HttpResponseRedirect(reverse_lazy('index'))
+
+class staffLandingPage(generic.View):
+    def get(self, request):
+        return render(request, "staff_landing_page.html")
+
+class patientLandingPage(generic.View):
+    def get(self, request):
+        return render(request, "patient_landing_page.html")

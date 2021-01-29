@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('', views.index, name='index')
 ]
@@ -20,6 +21,19 @@ urlpatterns += [
 urlpatterns += [
     path('SiteIDList/', views.SiteListView.as_view(), name='Site_List_View')
 ]
+
+urlpatterns += [
+    path('logInRedirect', views.logInRedirect, name='logInRedirect'),
+]
+
+urlpatterns += [
+    path('staffLandingPage', views.staffLandingPage.as_view(), name='staffLandingPage')
+]
+
+urlpatterns += [
+    path('patientLandingPage', views.patientLandingPage.as_view(), name='patientLandingPage')
+]
+
 
 
 # urlpatterns += [

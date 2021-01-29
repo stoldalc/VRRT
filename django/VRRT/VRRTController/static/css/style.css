@@ -5,7 +5,7 @@
 }
 
 :root {
-    --background-color: white;
+    --background-color: #050D1F;
     --text-color-dark: black;
     --text-color-mid: #707070;
     --text-color-light: white;
@@ -35,7 +35,7 @@ html{
 body {
     /*font-family: 'Segoe UI';*/
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color-light);
     font-size: 16pt;
     text-align: left;
     line-height: 1.6;
@@ -87,7 +87,7 @@ a :visited{
 }
 
 .logout{
-  color: var(--text-color-dark);
+  color: var(--text-color-light);
 }
 
 .siteList {
