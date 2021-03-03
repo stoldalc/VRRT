@@ -58,6 +58,31 @@ class SurveyInstance(models.Model):
     # O2 saturation at the end
     O2SaturationEnd = models.PositiveIntegerField(default=0, help_text='Oxygen saturation level at the end of session')
 
+class ExperinceSurveyInstance(models.Model):
+    """A survey that recoreds the users experince using the Likert scale"""
+
+    #ExperinceSurvey Object 
+    #ExperinceSurvey = models.AutoField(primary_key=True)
+    #SurveyInstance_FK = models.ForeignKey(SurveyInstance)
+
+    #Did the session help decrease pain
+    DecreasedPain = models.PositiveIntegerField(default = 3, help_text='Decreased Pain')
+
+    #Did the session decrease stress
+    DecreasedStress = models.PositiveBigIntegerField(default = 3, help_text='Decreased Stress')
+
+    #Was the session useful
+    SessionUsefulness  = models.PositiveBigIntegerField(default = 3, help_text='Was the session useful')
+
+    #Was the session enjoyable
+    SessionEnjoyability  = models.PositiveBigIntegerField(default = 3, help_text='Was the session enjoyable')
+
+    #Did the technology work
+    TechnologyFunction = models.PositiveBigIntegerField(default = 3, help_text = 'Did the technology function properly')
+
+    #Would you recommend this experince
+    ExperinceRecommendation = models.PositiveBigIntegerField(default = 3, help_text = 'Would you reccomend this therapy')
+
 
 class SiteID(models.Model):
     """A model that describes the VA location"""

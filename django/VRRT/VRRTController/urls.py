@@ -15,6 +15,10 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+    path('ExperinceSurvey/create', views.ExperinceSurveyCreate.as_view(), name='Experince_Survey_Instance_Create')
+]
+
+urlpatterns += [
     path('missionStatment', views.MissionStatmentView.as_view(), name="Mission_Statment"),
 ]
 

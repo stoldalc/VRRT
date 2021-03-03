@@ -1,7 +1,7 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
-from VRRTController.models import Survey, SurveyInstance, SiteID
+from VRRTController.models import Survey, SurveyInstance, SiteID, ExperinceSurveyInstance
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -47,9 +47,15 @@ class SurveyInstanceListView(generic.ListView):
 class SurveyCreate(CreateView):
     model = SurveyInstance
     fields = ['PainScoreStart','PainScoreEnd', 'HeartRateStart', 
-        'HeartRateEnd', 'BPStartValue1', 'BPStartValue2', 
-        'BPEndValue1', 'BPEndValue2', 'O2SaturationStart',
-        'O2SaturationEnd']
+            'HeartRateEnd', 'BPStartValue1', 'BPStartValue2', 
+            'BPEndValue1', 'BPEndValue2', 'O2SaturationStart',
+            'O2SaturationEnd']
+    success_url = reverse_lazy('Experince_Survey_Instance_Create')
+
+class ExperinceSurveyCreate(CreateView):
+    model = ExperinceSurveyInstance
+    fields = ['DecreasedPain','DecreasedStress','SessionUsefulness',
+            'SessionEnjoyability','TechnologyFunction','ExperinceRecommendation']
     success_url = reverse_lazy('index')
 
 class SiteListView(generic.ListView):
