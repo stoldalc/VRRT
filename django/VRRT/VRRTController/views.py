@@ -1,5 +1,6 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
+from django.views.generic.detail import DetailView
 from VRRTController.models import Survey, SurveyInstance, SiteID
 from django.views import generic
 from django.contrib.auth.decorators import login_required
@@ -75,3 +76,6 @@ class staffLandingPage(generic.View):
 class patientLandingPage(generic.View):
     def get(self, request):
         return render(request, "patient_landing_page.html")
+
+# class analyticsPage(DetailView):
+#     def get(self, request)
