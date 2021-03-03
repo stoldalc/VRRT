@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>VA Sites currently using VR therapy</h1>
+  {% if object_list %}
+  <ul>
+    {% for SiteID in object_list %}
+      <li class="siteList">
+         <p>{{SiteID.SiteName}} - {{SiteID.SiteTelephone}}<br>
+         {{SiteID.SiteAddress}} {{SiteID.SiteZipCode}}<br>
+         {{SiteID.SiteState}}, {{SiteID.SiteCity}} </p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no Sites currently using VR.</p>
+  {% endif %} 
+{% endblock %}
