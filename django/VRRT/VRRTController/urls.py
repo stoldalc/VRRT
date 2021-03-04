@@ -11,6 +11,10 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+    path('SurveyAnalytics/', views.SurveyAnalyticsView.as_view(), name='SurveyAnalyticsView'),
+]
+
+urlpatterns += [
     path('SurveyInstance/create', views.SurveyCreate.as_view(), name='Survey_Instance_Create'),
 ]
 

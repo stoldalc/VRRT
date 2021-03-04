@@ -41,8 +41,20 @@ class MissionStatmentView(generic.View):
 
 
 class SurveyInstanceListView(generic.ListView):
-    model = SurveyInstance 
-    
+    model = SurveyInstance
+
+
+
+
+
+class SurveyAnalyticsView(generic.View):
+    def get(self, request):
+        num_Surveys_Submitted = SurveyInstance.objects.all().count()
+        print("\tDEBUG-:Current number of submited therapy surrveys: " + str(num_Surveys_Submitted))
+        context = {
+            'num_Surveys_Submitted': num_Surveys_Submitted
+        }   
+        return render(request, 'surveyanalytics.html', context=context)
 
 class SurveyCreate(CreateView):
     model = SurveyInstance

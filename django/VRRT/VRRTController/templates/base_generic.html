@@ -21,7 +21,7 @@
                     <a href="{% url 'Site_List_View' %}"><li>VA Sites</li></a>
                     {% if request.user|has_group:"Staff" %}
                     <a class="Fillout Survey" href="{% url 'Survey_Instance_Create' %}"><li>Fill Out Survey</li></a>
-                    <a class="Survey Analytics" href="{% url 'SurveyInstanceList' %}"><li>Survey Analytics</li></a>
+                    <a class="Survey Analytics" href="{% url 'SurveyAnalyticsView' %}"><li>Survey Analytics</li></a>
                     {% endif %}
                     {%  if user.is_authenticated %}
                         <a class="logout" href="{% url 'logout'%}"><li>LogOut</li></a>
