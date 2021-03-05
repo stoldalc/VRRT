@@ -138,7 +138,7 @@ LOGIN_REDIRECT_URL = 'logInRedirect'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join( 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Heroku: Update database configuration from $DATABASE_URL.
@@ -151,7 +151,7 @@ DATABASES['default'].update(db_from_env)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / '/static/'  #. os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/VRRT/VRRTController/static/'  #. os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/VRRT/VRRTController/static/'
