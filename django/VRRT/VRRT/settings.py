@@ -154,7 +154,7 @@ DATABASES['default'].update(db_from_env)
 STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
-STATIC_URL = '/static/'
+STATIC_URL = 'VRRTController/static/'
 
 
 # Simplified static file serving.
